@@ -1,11 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: source
+  - source: /
     destination: /webapps/FirstDevOps
 hooks:
   BeforeInstall:
   AfterInstall:
   ApplicationStart:
   ValidateService:
-  
