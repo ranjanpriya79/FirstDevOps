@@ -5,6 +5,9 @@ files:
     destination: /webapps/FirstDevOps
 hooks:
   BeforeInstall:
+  - location: stop.sh
   AfterInstall:
+  - location: install.sh
   ApplicationStart:
-  ValidateService:
+  - location: start.sh
+  
