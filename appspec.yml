@@ -3,7 +3,3 @@ os: linux
 files:
   - source: /
     destination: /webapps/FirstDevOps
-hooks:
-  BeforeInstall:
-  AfterInstall:
-  ApplicationStart:
