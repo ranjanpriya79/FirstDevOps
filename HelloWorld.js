@@ -1,8 +1,6 @@
-var test = require('unit.js');
-var str = 'Hello, world!';
-
-test.string(str).startsWith('Hello');
-
-if (test.string(str).startsWith('Hello')) {
-  console.log('Passed');
-}
+var http = require('http');
+var server = http.createServer(function(req, res) {
+res.writeHead(200);
+res.end('Hi everybody!');
+});
+server.listen(8080);
