@@ -4,7 +4,11 @@ files:
   - source: /
     destination: /webapps/FirstDevOps
 hooks:
-ApplicationStop:
-    - location: /webapps/Scripts/stop.sh
-ApplicationStart:
-    - location: /webapps/Scripts/start.sh
+  ApplicationStart:
+    - location: . /webapps/Scripts/start.sh
+      timeout: 300
+      runas: ec2_user
+  ApplicationStop:
+    - location: . /webapps/Scripts/stop.sh
+      timeout: 300
+      runas: ec2_user
