@@ -5,6 +5,6 @@ files:
     destination: /webapps/FirstDevOps
 hooks:
 ApplicationStop:
-    - location: /webapps/Scripts/stop.sh
+    - location: Scripts/stop.sh
 ApplicationStart:
-    - location: /webapps/Scripts/start.sh
+    - location: Scripts/start.sh
