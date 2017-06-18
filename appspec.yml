@@ -6,4 +6,3 @@ files:
 hooks:
   ApplicationStart:
     - location: start.sh
-      runas: root
