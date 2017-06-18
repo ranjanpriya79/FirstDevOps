@@ -5,6 +5,6 @@ files:
     destination: /webapps/FirstDevOps
 hooks:
   ApplicationStart:
-    - location: Scripts/start.sh
+    - location: start.sh
       timeout: 300
       runas: ec2_user
