@@ -21,3 +21,5 @@ artifacts:
   files:
     - HelloWorld.js
     - appspec.yml
+    - Scripts/stop.sh
+    - Scripts/start.sh
