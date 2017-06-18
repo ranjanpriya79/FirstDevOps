@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /webapps/FirstDevOps
 hooks:
-BeforeInstall:
+ApplicationStop:
     - location: /webapps/Scripts/stop.sh
-AfterInstall:
+ApplicationStart:
     - location: /webapps/Scripts/start.sh
