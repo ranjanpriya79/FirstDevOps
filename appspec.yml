@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /webapps/FirstDevOps
+hooks:
+BeforeInstall:
+    - location: /webapps/Scripts/stop.sh
+AfterInstall:
+    - location: /webapps/Scripts/start.sh
