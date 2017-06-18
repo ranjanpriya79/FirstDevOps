@@ -3,6 +3,3 @@ os: linux
 files:
   - source: /
     destination: /webapps/FirstDevOps
-hooks:
-  ApplicationStart:
-    - location: start.sh
