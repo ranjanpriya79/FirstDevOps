@@ -19,7 +19,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - HelloWorld.js
-    - appspec.yml
-    - stop.sh
-    - start.sh
+    - '**/*'
