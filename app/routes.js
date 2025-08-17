@@ -13,9 +13,10 @@ module.exports = function(app) {
         // use mongoose to get all todos in the database
         Todo.find(function(err, todos) {
 
-            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-            if (err)
-                res.send(err)
+            // if there is an error retrieving, send the error and stop further execution
+            if (err) {
+                return res.status(500).send(err);
+            }
 
             res.json(todos); // return all todos in JSON format
         });
@@ -29,13 +30,15 @@ module.exports = function(app) {
             text : req.body.text,
             done : false
         }, function(err, todo) {
-            if (err)
-                res.send(err);
+            if (err) {
+                return res.status(500).send(err);
+            }
 
             // get and return all the todos after you create another
             Todo.find(function(err, todos) {
-                if (err)
-                    res.send(err)
+                if (err) {
+                    return res.status(500).send(err);
+                }
                 res.json(todos);
             });
         });
@@ -47,13 +50,15 @@ module.exports = function(app) {
         Todo.remove({
             _id : req.params.todo_id
         }, function(err, todo) {
-            if (err)
-                res.send(err);
+            if (err) {
+                return res.status(500).send(err);
+            }
 
             // get and return all the todos after you create another
             Todo.find(function(err, todos) {
-                if (err)
-                    res.send(err)
+                if (err) {
+                    return res.status(500).send(err);
+                }
                 res.json(todos);
             });
         });
